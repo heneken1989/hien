@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S2-Intro</title>
+    <title>Document</title>
 </head>
-<body>
-   <p>This is paragraph</p><p>This is paragraph</p><p>This is paragraph</p>
-    Welcome to my first wedsite!<br>
-    welcome again!
-    <p>This is paragraph</p>
-    this is another line.
-    <div>this is division</div>
-    <div title="this is title"> this is division</div>
-    <p style="color:rgb(255, 0, 25)">this is divison</p>
-    
-    Entities:<br>
-    Euro: &euro;<br>
-    Coppyright:&copy;<br>
-    Star: &star;<br>
-    Phone: &phone;<br>
+<body ng-app="myApp" >
+
+<a  href="#/!">HOme</a>
+<a  href="#!Product">Product</a>
+<a  href="#!About">About US </a>
+<a  href="#!contact US">contact us</a>
+<div ng-view style="width: 400px; height:400px ; background-color: aquamarine;"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
 
 
+ <script>
+    var  app  =  angular.module("myApp", ["ngRoute"]); 
+    app.config(function($routeProvider)  {
+     $routeProvider
+    .when("/",{
+     templateUrl  :"home.html"
+      })
+
+     .when("/Product",  { templateUrl  : "product.html"
+      })
+     .when("/About",  { templateUrl  :  "about.html"
+      })
+    .when("/contact US",  { templateUrl  : "contact.html"
+     })
+
+    })
+</script>
 </body>
 </html>
