@@ -16,10 +16,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
 
 
  <script>
-    var  app  =  angular.module("myApp", ["ngRoute","ngMessages"]); 
+    var  app  =  angular.module("myApp", ["ngRoute","ngMessages","ngSanitize"]); 
     app.config(function($routeProvider)  {
      $routeProvider
     .when("/",{
